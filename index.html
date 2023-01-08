@@ -27,7 +27,8 @@
         --secondary-font: "Roboto", sans-serif;
       }
       h1,
-      h3 {
+      h3,
+      h4 {
         font-family: var(--primary-font);
         font-weight: 700;
       }
@@ -40,7 +41,9 @@
         opacity: 0.7;
         font-size: 14px;
       }
-
+      h4 {
+        font-size: 18px;
+      }
       p {
         font-family: var(--secondary-font);
       }
@@ -95,24 +98,19 @@
       }
 
       .play-symbol {
-        font-size: 20px;
-        color: #0b6051;
-        display: inline;
-        vertical-align: middle;
-      }
-      .play-symbol-box {
-        background-color: #fdd65b;
-        border-radius: 90px;
-      }
-      .play-symbol-box p {
-        line-height: 3;
-        margin: 0;
+        font-size: 50px;
+        color: #fdd65b;
       }
       .info-bar,
       .support-bar {
         background-color: #00715d;
         color: #f9f5e8;
         margin-top: 80px;
+      }
+      .support-bar {
+        padding-left: 100px;
+        padding-top: 78px;
+        padding-bottom: 78px;
       }
       .support-bar h3 {
         font-size: 50px;
@@ -137,13 +135,16 @@
               like yourself create and sustain successfull online support.
             </h2>
             <div class="row my-5">
-              <div class="col-sm-10 mb-4">
+              <div class="col mb-4">
                 <a href="#" class="btn btn-success">Donate Now</a>
               </div>
-              <div class="col-sm-2 play-symbol-box text-center">
+              <div class="col">
+                <h4>See How You Can Help Through this Video</h4>
+              </div>
+              <div class="col">
                 <a href="#">
                   <p>
-                    <i class="bi bi-play-fill play-symbol"></i>
+                    <i class="bi bi-play-circle-fill play-symbol"></i>
                   </p>
                 </a>
               </div>
@@ -190,7 +191,9 @@
               </nav>
             </div>
             <div class="row">
-              <div class="col-11">a</div>
+              <div class="col-11">
+                <img src="1.png" alt="" class="img-fluid" />
+              </div>
               <div class="col-1" style="background-color: #fdd65b"></div>
             </div>
           </div>
@@ -243,7 +246,7 @@
         <div class="row d-none d-md-flex">
           <div
             class="col-sm-1"
-            style="background-color: #0b6051; border-radius: 50px 50px 0px 0px"
+            style="background-color: #0b6051; border-radius: 60px 50px 0px 0px"
           >
             <br />
             <br />
