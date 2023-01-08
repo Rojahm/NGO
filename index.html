@@ -11,12 +11,115 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <style>
+      :root {
+        --primary-font: "Philosopher", sans-serif;
+        --secondary-font: "Roboto", sans-serif;
+      }
+      h1,
+      h3 {
+        font-family: var(--primary-font);
+        font-weight: 700;
+      }
+      h1 {
+        font-size: 62px;
+        line-height: 1.07;
+      }
+      h2 {
+        font-family: var(--secondary-font);
+        opacity: 0.7;
+        font-size: 14px;
+      }
+
+      p {
+        font-family: var(--secondary-font);
+      }
       .hero {
         height: 100vh;
+        background-color: #f9f5e8;
       }
-      .info-bar {
+      .navbar-brand-box {
+        line-height: 7;
+      }
+      .navbar {
+        background-color: #fdd65b;
+        line-height: 5;
+      }
+      .navbar-nav {
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+      .hero-description {
+        padding-left: 100px;
+        padding-right: 141px;
+      }
+      .social-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style: none;
+        line-height: 5;
+        padding: 0;
+      }
+      .social-links li a {
+        text-decoration: none;
+        color: #0b6051;
+        font-family: var(--primary-font);
+        font-weight: 700;
+        font-size: 18px;
+      }
+      .social-links li {
+        color: #0b6051;
+        font-weight: 700;
+        font-size: 22px;
+        vertical-align: middle;
+      }
+      .btn {
+        line-height: 3;
+      }
+      .hero .btn-success {
         background-color: #00715d;
+        border-radius: 0;
+        padding: 5px 30px;
+      }
+
+      .play-symbol {
+        font-size: 20px;
+        color: #0b6051;
+        display: inline;
+        vertical-align: middle;
+      }
+      .play-symbol-box {
+        background-color: #fdd65b;
+        border-radius: 90px;
+      }
+      .play-symbol-box p {
+        line-height: 3;
+        margin: 0;
+      }
+      .info-bar,
+      .support-bar {
+        background-color: #00715d;
+        color: #f9f5e8;
+        margin-top: 80px;
+      }
+      .support-bar h3 {
+        font-size: 50px;
+      }
+      .footer-nav ul {
+        list-style: none;
+        padding: 0;
       }
     </style>
   </head>
@@ -24,49 +127,49 @@
     <div class="hero">
       <div class="container">
         <div class="row">
-          <div class="col-md">
-            <a href="#">logo</a>
-            <h1>chance to Help your Local Freaks.</h1>
+          <div class="col-md hero-description">
+            <div class="navbar-brand-box">
+              <a class="navbar-brand" href="#">LOGO</a>
+            </div>
+            <h1>Chance to Help your Local Freaks.</h1>
             <h2>
               We've spent the last 5 years helping over 25.000000 teams just
               like yourself create and sustain successfull online support.
             </h2>
-            <div class="row">
-              <div class="col">
-                <a href="#" class="btn">Donate Now</a>
+            <div class="row my-5">
+              <div class="col-sm-10 mb-4">
+                <a href="#" class="btn btn-success">Donate Now</a>
               </div>
-              <div class="col">
-                <a href="#" class="btn">See how to Help</a>
+              <div class="col-sm-2 play-symbol-box text-center">
+                <a href="#">
+                  <p>
+                    <i class="bi bi-play-fill play-symbol"></i>
+                  </p>
+                </a>
               </div>
             </div>
             <div class="row">
-              <div class="col">
-                <a href="#">Youtube</a>
-              </div>
-              <div class="col">
-                <a href="#">Facebook</a>
-              </div>
-              <div class="col">
-                <a href="#">Instagram</a>
+              <div class="social-links-box">
+                <ul class="social-links">
+                  <li>
+                    <a href="#">Youtube</a>
+                  </li>
+                  <li>.</li>
+                  <li>
+                    <a href="#">Facebook</a>
+                  </li>
+                  <li>.</li>
+                  <li>
+                    <a href="#">Instagram</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
           <div class="col-md">
-            <nav class="navbar navbar-expand-md bg-body-tertiary">
-              <div class="container-fluid">
-                <a class="navbar-brand" href="#">LOGO</a>
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarNav"
-                  aria-controls="navbarNav"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="row">
+              <nav class="navbar navbar-expand-md">
+                <div class="container">
                   <ul class="navbar-nav">
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="#"
@@ -84,40 +187,74 @@
                     </li>
                   </ul>
                 </div>
-              </div>
-            </nav>
+              </nav>
+            </div>
+            <div class="row">
+              <div class="col-11">a</div>
+              <div class="col-1" style="background-color: #fdd65b"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="info-bar">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-1">a</div>
-          <div class="col-sm-2">a</div>
-          <div class="col-sm-1"></div>
+        <div class="row d-none d-md-flex">
+          <div class="col-sm-1">
+            <br />
+            <br />
+          </div>
+          <div class="col-sm-2"></div>
+          <div
+            class="col-sm-1"
+            style="background-color: #0b6051; border-radius: 0px 0px 50px 50px"
+          ></div>
           <div class="col-sm-2"></div>
           <div class="col-sm-1"></div>
           <div class="col-sm-2"></div>
-          <div class="col-sm-1"></div>
+          <div
+            class="col-sm-1"
+            style="background-color: #0b6051; border-radius: 0px 0px 50px 50px"
+          ></div>
           <div class="col-sm-2"></div>
         </div>
         <div class="row">
-          <div class="col-sm-1"></div>
-          <div class="col-sm-2"></div>
-          <div class="col-sm-1"></div>
-          <div class="col-sm-2"></div>
-          <div class="col-sm-1"></div>
-          <div class="col-sm-2"></div>
-          <div class="col-sm-1"></div>
-          <div class="col-sm-2"></div>
+          <div class="col-sm-1">LOGO</div>
+          <div class="col-sm-2">
+            <h3>985+</h3>
+            <h2>Donation Recieved</h2>
+          </div>
+          <div class="col-sm-1">LOGO</div>
+          <div class="col-sm-2">
+            <h3>$10 M</h3>
+            <h2>Money Donated</h2>
+          </div>
+          <div class="col-sm-1">LOGO</div>
+          <div class="col-sm-2">
+            <h3>12+</h3>
+            <h2>Active Comaigns</h2>
+          </div>
+          <div class="col-sm-1">LOGO</div>
+          <div class="col-sm-2">
+            <h3>$60 M</h3>
+            <h2>Donation last Year</h2>
+          </div>
         </div>
-        <div class="row">
-          <div class="col-sm-1"></div>
+        <div class="row d-none d-md-flex">
+          <div
+            class="col-sm-1"
+            style="background-color: #0b6051; border-radius: 50px 50px 0px 0px"
+          >
+            <br />
+            <br />
+          </div>
           <div class="col-sm-2"></div>
           <div class="col-sm-1"></div>
           <div class="col-sm-2"></div>
-          <div class="col-sm-1"></div>
+          <div
+            class="col-sm-1"
+            style="background-color: #0b6051; border-radius: 50px 50px 0px 0px"
+          ></div>
           <div class="col-sm-2"></div>
           <div class="col-sm-1"></div>
           <div class="col-sm-2"></div>
@@ -126,7 +263,7 @@
     </div>
     <p>
       <a
-        class="btn btn-primary"
+        class="btn btn-success"
         data-bs-toggle="collapse"
         href="#collapseExample"
         role="button"
@@ -136,7 +273,7 @@
         Link with href
       </a>
       <button
-        class="btn btn-primary"
+        class="btn btn-success"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#collapseExample"
@@ -153,14 +290,14 @@
         trigger.
       </div>
     </div>
-    <div class="info-bar">
+    <div class="support-bar">
       <div class="container">
         <div class="row">
           <div class="col-sm-7">
-            <h2>Let's Help Other With Your Support</h2>
+            <h3>Let's Help Others With Your Support</h3>
           </div>
           <div class="col-sm-5">
-            <a href="#" class="btn">Donate Now</a>
+            <a href="#" class="btn btn-warning">Donate Now</a>
           </div>
         </div>
       </div>
