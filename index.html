@@ -62,18 +62,7 @@
         background-color: #fdd65b;
         line-height: 5;
       }
-      .navbar-nav {
-        flex-direction: row;
-        justify-content: space-evenly;
-        width: 100%;
-      }
-      .hero-description {
-        padding-left: 100px;
-        padding-right: 141px;
-      }
-      .social-links-box {
-        margin-top: 150px;
-      }
+      .navbar-nav,
       .social-links {
         display: flex;
         flex-direction: row;
@@ -81,19 +70,29 @@
         list-style: none;
         line-height: 5;
         padding: 0;
+        flex-direction: row;
+        justify-content: space-evenly;
       }
+      .navbar-nav li a,
       .social-links li a {
         text-decoration: none;
-        color: #0b6051;
+        color: #212529;
         font-family: var(--primary-font);
         font-weight: 700;
         font-size: 18px;
       }
+      .navbar-nav li,
       .social-links li {
-        color: #0b6051;
+        color: #212529;
         font-weight: 700;
         font-size: 22px;
-        vertical-align: middle;
+      }
+      .hero-description {
+        padding-left: 100px;
+        padding-right: 141px;
+      }
+      .social-links-box {
+        margin-top: 10px;
       }
       .btn {
         line-height: 3;
@@ -181,26 +180,21 @@
           </div>
           <div class="col-sm">
             <div class="row">
-              <nav class="navbar navbar-expand-md">
-                <div class="container">
-                  <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#"
-                        >Home</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled">Disabled</a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
+              <div class="navbar">
+                <ul class="navbar-nav">
+                  <li>
+                    <a href="#">Youtube</a>
+                  </li>
+                  <li>.</li>
+                  <li>
+                    <a href="#">Facebook</a>
+                  </li>
+                  <li>.</li>
+                  <li>
+                    <a href="#">Instagram</a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="row">
               <div class="col-10 hero-img-box">
